@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FizzBuzz Website</title>
+    <meta name="description" content="FizzBuzz Website with Flask" />
+  </head>
+  <body>
+    <h1>Sulaimon O. FizzBuzz Website</h1>
+
+    <p>INSTRUCTIONS:</p>
+    <ul>
+      <li>
+        For every number that is divisible by 3, show a list element with the
+        word 'Fizz'
+      </li>
+      <li>
+        For every number that is divisible by 5, show a list element with the
+        word 'Buzz'
+      </li>
+      <li>
+        For every number that is divisible by both 3 and 5, show a list element
+        with 'FizzBuzz'
+      </li>
+    </ul>
+
+    {% for i in range(1, 101) %}
+
+    <p>{% if i % 3 == 0 and i % 5 == 0 %} {{i}} is a multiple of 3 and 5.</p>
+    <p>{% elif i % 3 == 0 %} {{i}} is a multiple of 3.</p>
+    <p>{% elif i % 5 == 0 %} {{i}} is a multiple of 5.</p>
+    <p>{% else %} {{i}}</p>
+    {% endif %} {% endfor %}
+  </body>
+</html>
